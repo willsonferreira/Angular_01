@@ -12,7 +12,7 @@ export class ProductService {
   // If using Stackblitz, replace the url with this line
   // because Stackblitz can't find the api folder.
   // private productUrl = 'assets/products/products.json';
-  private productUrl = 'https://drive.google.com/file/d/1SgHOcGiJPx6jAvCAPjdYxaiZBtuQcXKw/view?usp=drivesdk';
+  private productUrl = 'https://github.com/willsonferreira/Angular_01/blob/master/api/products/products.json';
 
   constructor(private http: HttpClient) {}
 
