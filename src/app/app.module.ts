@@ -5,7 +5,6 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './home/welcome.component';
-import { ProductModule } from './products/product.module';
 
 @NgModule({
   declarations: [
@@ -19,8 +18,7 @@ import { ProductModule } from './products/product.module';
       { path: 'welcome', component: WelcomeComponent },
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
       { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
-    ]),
-    ProductModule
+    ])
   ],
   bootstrap: [AppComponent]
 })
