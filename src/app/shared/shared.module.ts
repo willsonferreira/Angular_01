@@ -10,7 +10,6 @@ import { FormsModule } from '@angular/forms';
     StarComponent
   ],
   exports: [
-    StarComponent,
     CommonModule,
     FormsModule
   ]
