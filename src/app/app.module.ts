@@ -10,7 +10,7 @@ import { ProductListComponent } from './products/product-list.component'
   imports: [
       BrowserModule,
       FormsModule,
-      NgbModule.forRoot()
+      NgbModule
     ],
   declarations: [
     AppComponent,
