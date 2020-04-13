@@ -15,7 +15,7 @@
        </div>
      </div>
      <div class='table-responsive'>
-       <table class='table'>
+       <table class='table' *ngif='products && products.length'>
          <thead>
            <tr>
              <th>
@@ -28,6 +28,22 @@
              <th>Available</th>
              <th>Price</th>
              <th>5 Star Rating</th>
+           </tr>
+           <tr *ngfor='let product of products'>
+             
+             <td>
+               <img *ngIf='showImage' [src]='product.imageUrl' [title]='product.productName' [style.width.px]='imageWidth' [style.margin.px]='imageMargin'>
+             </td>
+             <td>
+               <a [routerLink]="['/products', product.productId]">
+                 {{ product.productName }}
+               </a>
+             </td>
+             <td>{{ product.productCode | lowercase | convertToSpaces: '-' }}</td>
+             <td>{{ product.releaseDate }}</td>
+             <td>{{ product.price | currency:'USD':'symbol':'1.2-2'}}</td>
+             <td>
+             </td>
            </tr>
          </thead>
          <tbody>
