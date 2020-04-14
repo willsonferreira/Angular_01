@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 import { FormsModule } from '@angular/forms'
 
+import { CommonModule } from "@angular/common";
+
+
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './products/product-list.component'
 
@@ -10,7 +13,8 @@ import { ProductListComponent } from './products/product-list.component'
   imports: [
       BrowserModule,
       FormsModule,
-      NgbModule
+      NgbModule,
+      CommonModule
     ],
   declarations: [
     AppComponent,
