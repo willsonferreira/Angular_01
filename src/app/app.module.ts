@@ -3,9 +3,6 @@ import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 import { FormsModule } from '@angular/forms'
 
-import { CommonModule } from "@angular/common";
-
-
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './products/product-list.component'
 
