@@ -46,8 +46,8 @@ export class ProductListComponent{
     ];
     
     constructor(){
-      this.listFilter = 'cart';
       this.filteredProducts = this.products;
+      this.listFilter = 'cart';
     }
     
     performFilter(filterBy: string): IProduct[] {
