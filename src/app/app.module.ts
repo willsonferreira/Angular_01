@@ -8,7 +8,8 @@ import { StarComponent } from './shared/star.component';
 @NgModule({
   declarations: [
     AppComponent,
-    ProductListComponent
+    ProductListComponent,
+    StarComponent
   ],
   imports: [
       BrowserModule,
