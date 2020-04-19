@@ -10,7 +10,17 @@ export class ProductListComponent{
   imageWidth: number = 25;
   imageMargin: number = 5;
   showImage: boolean = false;
-  listFilter: string = 'cart';
+  
+  _listFilter = '';
+  get listFilter(): string {
+    return this._listFilter;
+  }
+  set listFilter(value: string) {
+    this._listFilter = value;
+    this.filteredProducts = this.listFilter ? this.performFilter(this.listFilter) : this.products;
+  }
+  
+  filteredProducts: IProduct[];
   
   products: IProduct[] = [
     {
@@ -34,6 +44,17 @@ export class ProductListComponent{
       "imageUrl": "assets/images/garden_cart.png"
     }
     ];
+    
+    constructor(){
+      this.listFilter = 'cart';
+      this.filteredProducts = this.products;
+    }
+    
+    performFilter(filterBy: string): IProduct[] {
+      filterBy = filterBy.toLocaleLowerCase();
+      return this.products.filter((product: IProduct) =>
+        product.productName.toLocaleLowerCase().indexOf(filterBy) !== -1);
+    }
 
     toggleImage(){
       this.showImage = !this.showImage;
