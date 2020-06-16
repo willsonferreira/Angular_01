@@ -13,6 +13,7 @@
     "@angular/router": "^9.1.0",
     "bootstrap": "^4.4.1",
     "core-js": "^3.6.4",
+    "express": "^4.17.1",
     "font-awesome": "^4.7.0",
     "rxjs": "^6.5.4",
     "tslib": "^1.10.0",
@@ -20,12 +21,11 @@
   },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "start": "node server.js",
     "postinstall": "ng build --aot --prod"
   },
   "devDependencies": {
@@ -50,7 +50,7 @@
     "typescript": "^3.8.3"
   },
   "engines": {
-   "node": "10.13.0",
-   "npm": "6.4.1"
- }
+    "node": "10.13.0",
+    "npm": "6.4.1"
+  }
 }
